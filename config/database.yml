@@ -20,6 +20,8 @@ default: &default
 development:
   <<: *default
   database: sample_app5_mysql_development
+  username: <%= ENV['APP5_DEV_USER'] %>
+  password: <%= ENV['APP5_DEV_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
